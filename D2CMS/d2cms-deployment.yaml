@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: d2cms
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: d2cms
+  template:
+    metadata:
+      labels:
+        app: d2cms
+    spec:
+      containers:
+      - image: janardhan54/d2cms:1
+        name: d2cms
+        ports:
+        - containerPort: 8888
