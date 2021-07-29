@@ -14,7 +14,7 @@ spec:
         app: d2cms
     spec:
       containers:
-      - image: janardhan54/d2cms:1
+      - image: janardhan54/d2cms:2
         name: d2cms
         ports:
         - containerPort: 8888
